@@ -16,6 +16,7 @@ public class Base {
 	driver.manage().window().maximize();
 	driver.get("https://login-v2.upstox.com/");
 	driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+		System.out.println("I am here piyush");
 	}
 /*	@AfterClass
 	public void closeBrowser() {
