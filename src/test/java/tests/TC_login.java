@@ -16,6 +16,7 @@ public void login() throws Throwable {
 	DOB_page db=new DOB_page(driver);
 	db.getCode();
 	VerifyPage vp=new VerifyPage(driver);
+	Thread.sleep(3000);
 	vp.getVerify();
 	
 }

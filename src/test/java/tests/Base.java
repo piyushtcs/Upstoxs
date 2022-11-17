@@ -13,11 +13,12 @@ import PageObjects.DOB_page;
 import PageObjects.HomePage;
 import PageObjects.LoginPage;
 import PageObjects.VerifyPage;
+import Utilities.ReadConfig;
 
 
 public class Base {
 public WebDriver driver;
-	
+   
 	@BeforeClass
 	public void OpenBrowser() {
 	System.setProperty("webdriver.chrome.driver","C:\\Users\\Sweety\\eclipse-workspace\\Upstocks\\Drivers\\chromedriver.exe");

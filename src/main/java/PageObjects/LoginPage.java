@@ -8,6 +8,10 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import Utilities.ReadConfig;
+
+
+
 public class LoginPage  {
 	
 	public static String expErr="We have noticed that your password has not been reset recently. To proceed, please reset your password by clicking on \"Forgot Password\" option below.";
@@ -19,13 +23,16 @@ public class LoginPage  {
 	public LoginPage(WebDriver driver) {
 		PageFactory.initElements(driver,this);
 	}
-	public void getUN() {
+	
+	public void getUN() throws Throwable {
+		ReadConfig kk=new ReadConfig();
 		UN.clear();
-		UN.sendKeys("User");
+		UN.sendKeys(kk.getUsername());
 		}
-	public void getPass() {
+	public void getPass() throws Throwable {
+		ReadConfig kk=new ReadConfig();
 		pass.clear();
-		pass.sendKeys("password");
+		pass.sendKeys(kk.getPassword());
 	}
 	public void getLoginClick() {
 		loginBtn.click();
